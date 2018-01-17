@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite", "Composite\Comp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{882F08F6-F653-420B-A178-6289A1D98668}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{F53B1E44-592E-4F72-9213-53CE4C315CC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{882F08F6-F653-420B-A178-6289A1D98668}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{882F08F6-F653-420B-A178-6289A1D98668}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{882F08F6-F653-420B-A178-6289A1D98668}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F53B1E44-592E-4F72-9213-53CE4C315CC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F53B1E44-592E-4F72-9213-53CE4C315CC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F53B1E44-592E-4F72-9213-53CE4C315CC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F53B1E44-592E-4F72-9213-53CE4C315CC4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
