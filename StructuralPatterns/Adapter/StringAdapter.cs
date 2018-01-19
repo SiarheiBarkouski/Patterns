@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Adapter
 {
-    class StringAdapter : IStringAdapter
+    public class StringAdapter : IStringAdapter
     {
         private string _inputString;
 
@@ -20,7 +20,7 @@ namespace Adapter
             get => _inputString;
             set => _inputString = value;
         }
-        public void CountLetters(char[] letters)
+        public void CountLetters(params char[] letters)
         {
             int counter = 0;
             Console.WriteLine("__________\n" + _inputString);
