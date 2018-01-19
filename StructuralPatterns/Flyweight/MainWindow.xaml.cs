@@ -31,8 +31,6 @@ namespace Flyweight
             var chars = str.ToCharArray();
             var f = new CharacterFactory();
             
-            var position = 0;
-            // используем для каждого символа объект-приспособленец
             foreach (var c in chars)
             {
                 try
@@ -40,10 +38,7 @@ namespace Flyweight
                     var character = f.GetCharacter(c);
                     sp.Children.Add(new Image {Source = character.Display()});
                 }
-                catch
-                {
-                }
-
+                catch {}
             }
         }
 
