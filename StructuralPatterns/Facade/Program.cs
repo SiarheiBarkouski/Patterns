@@ -12,8 +12,8 @@ namespace Facade
         {
             var x = new MathSystemFacade();
 
-            Console.WriteLine(x.Sqrt(225));
-            Console.WriteLine(x.Factorial(5));
+            Console.WriteLine(x.GetSqrt(225));
+            Console.WriteLine(x.GetFactorial(5));
 
             Console.ReadKey();
 

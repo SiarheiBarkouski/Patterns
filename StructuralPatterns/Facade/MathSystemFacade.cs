@@ -37,19 +37,19 @@ namespace Facade
             return _simple.Devide(a, b);
         }
 
-        public double Log(int a)
+        public double GetLog(int a)
         {
-            return _difficult.Log(a);
+            return _difficult.GetLog(a);
         }
 
-        public double Sqrt(int a)
+        public double GetSqrt(int a)
         {
-            return _difficult.Sqrt(a);
+            return _difficult.GetSqrt(a);
         }
 
-        public long Factorial(int a)
+        public long GetFactorial(int a)
         {
-            return _difficult.Factorial(a);
+            return _difficult.GetFactorial(a);
         }
 
 
