@@ -8,11 +8,11 @@ namespace TemplateMethod
 {
     class School : EducationalInstitution
     {
-
+        public int Number { get; set; }
 
         protected override void Enter()
         {
-            Console.WriteLine("Congratulations!!! You have been enrolled in a school.");
+            Console.WriteLine($"Congratulations!!! You have been enrolled in a school № {Number}.");
         }
 
         protected override void Study()
