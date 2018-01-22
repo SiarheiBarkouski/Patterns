@@ -9,6 +9,6 @@ namespace Adapter
     interface IStringAdapter
     {
         string InputString { get; set; }
-        void CountLetters(char[] letters);
+        List<int> CountLetters(char[] letters);
     }
 }

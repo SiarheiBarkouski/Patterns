@@ -8,28 +8,17 @@ namespace Adapter
 {
     public class StringAdapter : IStringAdapter
     {
-        private string _inputString;
+        public string InputString { get; set; }
+        
+        public List<int> CountLetters(params char[] letters)
+        {
+            var resultArray = new List<int>();
 
-        public StringAdapter()
-        {
-            _inputString = String.Empty;
-        }
-
-        public string InputString
-        {
-            get => _inputString;
-            set => _inputString = value;
-        }
-        public void CountLetters(params char[] letters)
-        {
-            int counter = 0;
-            Console.WriteLine("__________\n" + _inputString);
-            for (int i = 0; i < letters.Length; i++)
+            foreach (var item in letters)
             {
-                counter += _inputString.Count(t => t.Equals(letters[i]));
-                Console.WriteLine($"'{letters[i]}' enters {counter} times.");
-                counter = 0;
+                resultArray.Add(InputString.Count(t => t.Equals(item)));
             }
+            return resultArray;
         }
     }
 }
