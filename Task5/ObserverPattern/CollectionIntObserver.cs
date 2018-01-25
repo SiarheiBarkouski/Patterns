@@ -15,6 +15,7 @@ namespace ObserverPattern
         public void OnNext(CollectionInt collectionInt)
         {
             collectionInt.Sort();
+            Console.WriteLine("Collection sorted.");
         }
 
         public void OnError(Exception error)

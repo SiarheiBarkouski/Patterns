@@ -30,9 +30,7 @@ namespace ObserverPattern
 
             foreach (var item in list)
                 Console.WriteLine(item);
-
-
-
+            
             Console.ReadKey();
         }
     }
