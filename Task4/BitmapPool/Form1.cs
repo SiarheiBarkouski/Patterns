@@ -43,7 +43,7 @@ namespace BitmapPool
             var ofd = new OpenFileDialog();
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                _pool.Initialize(new Bitmap(ofd.FileName));
+                _pool.Initialize(ofd.FileName);
             }
         }
     }

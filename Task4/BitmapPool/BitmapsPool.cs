@@ -12,15 +12,18 @@ namespace BitmapPool
         private readonly int _maxSize;
         private BitmapAdapter _adapter;
         private IList<Bitmap> _bitmaps;
+        private string _filePath;
 
         public BitmapsPool(int maxSize)
         {
             _maxSize = maxSize;
         }
 
-        public void Initialize(Bitmap original)
+        public void Initialize(string filePath)
         {
-            _adapter = new BitmapAdapter(original);
+            if (filePath.Equals(_filePath)) return;
+            _filePath = filePath;
+            _adapter = new BitmapAdapter(new Bitmap(_filePath));
             _bitmaps = new List<Bitmap>
             {
                 _adapter.Bitmap,
