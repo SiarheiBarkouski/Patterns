@@ -1,9 +1,10 @@
 ﻿using System;
 using System.IO;
+using ServicesFactory.Interfaces;
 
-namespace ServicesFactory
+namespace ServicesFactory.Services
 {
-    public class FileService
+    internal class FileService : IFileService
     {
         private static readonly Lazy<FileService> Instance = new Lazy<FileService>(() => new FileService(), true);
         public static FileService GetInstance()
@@ -34,11 +35,8 @@ namespace ServicesFactory
         {
             try
             {
-                if (File.Exists(sourcePath))
-                    File.Delete(sourcePath);
-
                 using (var streamSource = new FileStream(sourcePath, FileMode.Open, FileAccess.Read, FileShare.Read))
-                using (var streamDestination = new FileStream(destPath, FileMode.Append, FileAccess.Write, FileShare.ReadWrite))
+                using (var streamDestination = new FileStream(destPath, FileMode.Create, FileAccess.Write, FileShare.Write))
                 {
                     for (int i = 0; i < streamSource.Length - 1; i++)
                     {

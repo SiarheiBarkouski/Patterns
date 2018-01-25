@@ -1,18 +1,21 @@
-﻿namespace ServicesFactory
+﻿using ServicesFactory.Interfaces;
+using ServicesFactory.Services;
+
+namespace ServicesFactory
 {
     public class ServiceFactory
     {
-        public AudioService GetAudioService()
+        public IAudioService GetAudioService()
         {
             return AudioService.GetInstance();
         }
 
-        public MessageBoxService GetMessageBoxService()
+        public IMessageBoxService GetMessageBoxService()
         {
             return MessageBoxService.GetInstance();
         }
 
-        public FileService GetFileService()
+        public IFileService GetFileService()
         {
             return FileService.GetInstance();
         }

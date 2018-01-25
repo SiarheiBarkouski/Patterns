@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ServicesFactory.Interfaces;
 
-namespace ServicesFactory
+namespace ServicesFactory.Services
 {
-    public class MessageBoxService
+    internal class MessageBoxService : IMessageBoxService
     {
         private static readonly Lazy<MessageBoxService> Instance = new Lazy<MessageBoxService>(() => new MessageBoxService(), true);
         public static MessageBoxService GetInstance()

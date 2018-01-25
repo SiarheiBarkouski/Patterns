@@ -32,6 +32,7 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.tbAudio = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnPlay
@@ -69,14 +70,25 @@
             this.tbAudio.Location = new System.Drawing.Point(131, 12);
             this.tbAudio.Multiline = true;
             this.tbAudio.Name = "tbAudio";
-            this.tbAudio.Size = new System.Drawing.Size(300, 112);
+            this.tbAudio.Size = new System.Drawing.Size(300, 152);
             this.tbAudio.TabIndex = 4;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(41, 141);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 5;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 384);
+            this.ClientSize = new System.Drawing.Size(443, 186);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tbAudio);
             this.Controls.Add(this.btnOpen);
             this.Controls.Add(this.btnStop);
@@ -94,6 +106,7 @@
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.TextBox tbAudio;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

@@ -28,11 +28,20 @@ namespace WinFormsTester
             var y = _factory.GetMessageBoxService();
             y.CatchException(() => x.Play(AudioFilePath));
         }
-
         private void btnStop_Click(object sender, EventArgs e)
         {
-            var x = _factory.GetFileService();
-            x.WriteFile(AudioFilePath, Environment.CurrentDirectory + $"//result.mp3");
+            var x = _factory.GetAudioService();
+            x.Stop();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var sfd = new SaveFileDialog();
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                var x = _factory.GetFileService();
+                x.WriteFile(AudioFilePath, sfd.FileName);
+            }
         }
 
         private void btnOpen_Click(object sender, EventArgs e)

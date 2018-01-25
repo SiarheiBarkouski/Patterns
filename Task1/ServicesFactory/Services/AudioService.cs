@@ -1,31 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NAudio.Wave;
+using ServicesFactory.Interfaces;
 
-namespace ServicesFactory
+namespace ServicesFactory.Services
 {
-    public class AudioService
+    internal class AudioService : IAudioService
     {
         private static readonly Lazy<AudioService> Instance = new Lazy<AudioService>(() => new AudioService(), true);
-        private readonly WaveOut _waveOut = new WaveOut();
+        private readonly WaveOut _waveOut;
         private Mp3FileReader _reader;
 
         private AudioService()
         {
+            _waveOut = new WaveOut();
         }
 
         public static AudioService GetInstance()
         {
             return Instance.Value;
         }
-        
+
         public void Play(string path)
         {
-            _reader = new Mp3FileReader(path);
             _waveOut.Init(_reader);
             _waveOut.Play();
         }
@@ -34,7 +31,7 @@ namespace ServicesFactory
         {
             _waveOut.Stop();
         }
-        
+
         public AudioFileInfo GetAudioFileInfo(string path)
         {
             _reader = new Mp3FileReader(path);
