@@ -1,0 +1,25 @@
+﻿<Window x:Class="Flyweight.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Flyweight"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="900">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Height ="50px" Name="sp"  Grid.Row="0" Grid.Column="0" Orientation="Horizontal"/>
+
+        <Button Margin="10px"  Name="btnMain" Grid.Row="1" Grid.Column="0" Content="ClickMe" Click="Button_Click"></Button>
+
+        <TextBox Margin="20px" Name="tbMain" Text="d_b ae c f" Grid.Row="0" Grid.Column="1"></TextBox>
+    </Grid>
+</Window>
